@@ -13,7 +13,7 @@ func TestQueueEnqueue(t *testing.T) {
 
 	var expected []interface{}
 	expected = append(expected, 1, 2, 3)
-	assert.EqualValues(t, expected, q.SliceValues())
+	assert.EqualValues(t, expected, q.sl.SliceValues())
 }
 
 func TestQueueDequeue(t *testing.T) {

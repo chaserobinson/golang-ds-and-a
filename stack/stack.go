@@ -3,7 +3,7 @@ package stack
 import "github.com/chaserobinson/golang-ds-and-a/list"
 
 // Stack is a simple abstraction over a singly linked list.
-// Includes Put and Take methods.
+// Includes Push and Pop methods
 type Stack struct {
 	sl list.SinglyLinked
 }

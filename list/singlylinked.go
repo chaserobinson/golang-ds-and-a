@@ -15,6 +15,10 @@ func (n *Node) trimmed() *Node {
 	return n
 }
 
+func (n *Node) Value() interface{} {
+	return n.value
+}
+
 type SinglyLinked struct {
 	head   *Node
 	tail   *Node

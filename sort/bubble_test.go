@@ -1,7 +1,7 @@
 package sort
 
 import (
-	"reflect"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -24,9 +24,7 @@ func TestBubble(t *testing.T) {
 			want: []int{-3, 8, 29, 37, 45, 88},
 		},
 	}
-	for _, tt := range tests {
-		if got := Bubble(tt.nums); !reflect.DeepEqual(got, tt.want) {
-			t.Errorf("(%v) -> %v [want %v]", tt.nums, got, tt.want)
-		}
+	for _, tc := range tests {
+		assert.Equal(t, Bubble(tc.nums), tc.want)
 	}
 }

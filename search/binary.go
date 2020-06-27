@@ -1,6 +1,6 @@
 package search
 
-func binary(nums []int, value int) int {
+func Binary(nums []int, value int) int {
 	left := 0
 	right := len(nums) - 1
 

@@ -1,6 +1,9 @@
 package search
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestBinary(t *testing.T) {
 	type test struct {
@@ -14,15 +17,7 @@ func TestBinary(t *testing.T) {
 		{nums: []int{0, 1, 2, 3, 4, 5}, value: 7, want: -1},
 		{nums: []int{}, value: 42, want: -1},
 	}
-	for _, tt := range tests {
-		if result := binary(tt.nums, tt.value); result != tt.want {
-			t.Errorf(
-				"(%v, %v) -> %v [want %v]",
-				tt.nums,
-				tt.value,
-				result,
-				tt.want,
-			)
-		}
+	for _, tc := range tests {
+		assert.Equal(t, Binary(tc.nums, tc.value), tc.want)
 	}
 }
